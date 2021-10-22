@@ -1,0 +1,11 @@
+reverse:
+  image: nginx
+  container_name: nginx_reverse
+  restart: always
+  volumes:
+   - ${NGINX_EXTERNAL_CONFIG}:${NGINX_INTERNAL_CONFIG}
+   - ${NGINX_EXTERNAL_LOGS}:${NGINX_INTERNAL_LOGS}
+   - ${NGINX_EXTERNAL_CERTS}:${NGINX_INTERNAL_CERTS}
+  ports:
+   - "80:80"
+   - "443:443"
