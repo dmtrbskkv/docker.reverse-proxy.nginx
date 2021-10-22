@@ -1,0 +1,12 @@
+# IDEs
+.idea
+
+# Root Folders
+.env
+
+# Nginx
+docker/nginx/config/*.conf
+!docker/nginx/config/default.conf
+!docker/nginx/config/moodmachine.ru.conf.example
+!docker/nginx/config/options-ssl-nginx.conf
+docker/nginx/logs/*
